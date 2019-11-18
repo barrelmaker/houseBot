@@ -1,5 +1,4 @@
 const cron = require('node-cron');
-console.log(process.env.ACCOUNT_SID)
 const dotenv = require('dotenv');
 dotenv.config();
 
