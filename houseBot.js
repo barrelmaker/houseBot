@@ -2,7 +2,6 @@ const cron = require('node-cron');
 console.log(process.env.ACCOUNT_SID)
 const dotenv = require('dotenv');
 dotenv.config();
-console.log(process.env.ACCOUNT_SID)
 
 //cron.schedule('* * * * *', () => {
     const {Builder, By, Key, until} = require('selenium-webdriver');
