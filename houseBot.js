@@ -2,7 +2,7 @@ const cron = require('node-cron');
 const dotenv = require('dotenv');
 dotenv.config();
 
-cron.schedule('0 8,12,20 * * *', () => {
+cron.schedule('0,33 * * * *', () => {
     const {Builder, By, Key, until} = require('selenium-webdriver');
     const accountSid = process.env.ACCOUNT_SID; 
     const authToken = process.env.AUTH_TOKEN;   
