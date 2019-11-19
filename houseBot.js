@@ -2,7 +2,7 @@ const cron = require('node-cron');
 const dotenv = require('dotenv');
 dotenv.config();
 
-cron.schedule('* * * * *', () => {
+cron.schedule('0 8,12,20 * * *', () => {
     const {Builder, By, Key, until} = require('selenium-webdriver');
     const accountSid = process.env.ACCOUNT_SID; 
     const authToken = process.env.AUTH_TOKEN;   
@@ -26,14 +26,14 @@ cron.schedule('* * * * *', () => {
             let text = await driver.getPageSource();
             
             // If the desired house is listed
-            if (text.search('303 Alfred')) {
-                /*
+            if (text.search('187 University')) {
+                
                 client.messages.create({
                     body: 'The house is on the market!',
-                    to: process.env.JOSH_NUMBER',  
+                    to: process.env.JOSH_NUMBER,  
                     from: process.env.TWILIO_NUMBER
                 }).then(message => console.log(message.sid));
-                */
+                
                 client.messages.create({
                     body: 'The house is on the market!',
                     to: process.env.COOP_NUMBER,  
