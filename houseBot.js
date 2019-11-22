@@ -19,7 +19,7 @@ cron.schedule('0,33 * * * *', () => {
 
             // Enter credentials to the proper fields
             await driver.findElement(By.name('rentalsearch[property_types][4]')).click();
-            await driver.findElement(By.name('rentalsearch[property_types][2]')).click();
+            await driver.findElement(By.name('rentalsearch[lease_types][2]')).click();
             await driver.findElement(By.name('rentalsearch[lease_types][1]')).click();
             await driver.findElement(By.name('rentalsearch[bedrooms]')).sendKeys('5', Key.ENTER);
             await driver.findElement(By.name('rentalsearch[perpage]')).sendKeys('5', Key.ENTER);
