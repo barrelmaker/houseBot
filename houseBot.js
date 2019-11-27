@@ -28,7 +28,7 @@ cron.schedule('0,33 * * * *', () => {
             let text = await driver.getPageSource();
             
             // If the desired house is listed
-            if (text.includes('187 University')) {
+            if (text.includes(process.env.HOUSE)) {
                 
                 client.messages.create({
                     body: 'The house is on the market!',
