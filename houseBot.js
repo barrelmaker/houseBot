@@ -39,13 +39,13 @@ cron.schedule('* * * * *', () => {
 
             // If the desired house is listed
             if (text.includes(process.env.HOUSE)) {
-                /*
+                
                 client.messages.create({
                     body: 'The house is on the market!',
                     to: process.env.JOSH_NUMBER,  
                     from: process.env.TWILIO_NUMBER
                 }).then(message => console.log(message.sid));
-                */
+                
                 client.messages.create({
                     body: 'The house is on the market!',
                     to: process.env.COOP_NUMBER,  
