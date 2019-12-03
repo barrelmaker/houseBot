@@ -12,7 +12,7 @@ cron.schedule('* * * * *', () => {
     const authToken = process.env.AUTH_TOKEN;   
     const twilio = require('twilio');
 
-    // Checks how many times it has ran successfully, if greater tthan 10 then stop sending texts
+    // Checks how many times it has ran successfully, if greater than 10 then stop sending texts
     if (counter > 10) {
         process.exit(22)
     }
